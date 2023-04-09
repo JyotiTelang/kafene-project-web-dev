@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kafene - EDYODA Project</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body onload="checkStatus()">
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+            alt=""
+          />
+          <span>Kafene</span>
+          <div class="header-list">
+            <ul>
+              <a href="./orders.html" id="orders-link" class="head-links">
+                <li>Orders</li></a
+              >
+              <a href="./products.html" id="products-link" class="head-links"
+                ><li>Products</li></a
+              >
+              <a href="./users.html" id="users-link" class="head-links">
+                <li>Users</li></a
+              >
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- loader  -->
+
+    <!-- main -->
+    <main>
+      <section id="login" onload="">
+        <div class="login-form">
+          <h1>Sign In</h1>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Username"
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+          />
+          <br />
+          <button id="login-form" onclick="login()">Login</button>
+        </div>
+      </section>
+    </main>
+    <footer>Copied by Jyoti Telang- as on April 2023</footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
