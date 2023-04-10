@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body onload="setProducts()">
+    <!-- header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+            alt=""
+          />
+          <span>Kafene</span>
+        </div>
+        <div class="header-list">
+          <ul>
+            <a href="./orders.html" id="orders-link" class="head-links">
+              <li>Orders</li></a
+            >
+            <a href="./products.html" id="products-link" class="head-links">
+              <li>Products</li></a
+            >
+            <a href="./users.html" id="users-link" class="head-links">
+              <li>Users</li></a
+            >
+          </ul>
+        </div>
+        <a href="../index.html" id="logout" onclick="logout()">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <section id="products-page" style="display: flex; margin: 10px" onload="">
+        <!-- <div class="loader"></div> -->
+        <div
+          class="filters"
+          style="position: fixed; top: 20vh; left: 5vw; margin: 10px"
+        >
+          <div>
+            <input type="checkbox" id="expired" />
+            <label for="expired">Expired</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lowStock" />
+            <label for="lowStock">Low Stock</label>
+          </div>
+        </div>
+        <h1 class="page-header">Products</h1>
+        <div id="orders-table">
+          <table>
+            <thead>
+              <tr>
+                <th class="id">ID</th>
+                <th>Product Name</th>
+                <th>Product Brand</th>
+                <th>Expiry Date</th>
+                <th class="price">Unit Price</th>
+                <th class="stock">Stock</th>
+              </tr>
+            </thead>
+            <tbody id="products"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="../index.js"></script>
+    <script src="../js/products.js"></script>
+  </body>
+</html>

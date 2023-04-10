@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body onload="setOrders()">
+  <!-- header -->
+    <header>
+        <nav>
+          <div class="logo">
+            <img src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="" />
+            <span>Kafene</span>
+          </div>
+          <div class="header-list">
+            <ul>
+              <a href="./orders.html"id="orders-link" class="head-links"> <li>Orders</li></a>
+              <a href="./products.html"id="products-link" class="head-links"><li>Products</li></a>
+              <a href="./users.html"id="users-link" class="head-links" > <li>Users</li></a>
+            </ul>
+          </div>
+          <a href="../index.html" id="logout" onclick="logout()">Logout</a>
+        </nav>
+      </header>
+  <!-- main -->
+  <main>
+        <section id="orders-page" onload="">
+          <!-- loader -->
+            <div class="loader"> </div>      
+            <!-- content -->
+            <h1 class="page-header">Orders</h1>
+            <div id="orders-table">
+              <div class="filters">
+                <h2>Filters</h2>
+                <h4>Count : <span id="order-count"></span></h4>
+                <label for="newfilter"><input type="checkbox" class="checkboxes" name="new" id="newfilter" checked value="New"/>New</label>
+                <label for="packed"><input type="checkbox" class="checkboxes"name="Packed"id="packed" checked value="Packed"/>Packed</label>
+                <label for="inTransit"><input type="checkbox" class="checkboxes" name="InTransit" id="inTransit" checked value="InTransit"/>InTransit</label>
+                <label for="delivered"><input type="checkbox" class="checkboxes" name="delivered" id="delivered" checked value="Delivered"/>Delivered</label>
+              </div>
+    
+              <table>
+                <thead>
+                  <tr>
+                    <th class="id">ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="orders"></tbody>
+              </table>
+            </div>
+            <!--  -->
+          </section>
+  </main>
+
+    <script src="../index.js"></script>
+    <script src="../js/orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body onload="setUsers()">
+    <!-- header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+            alt=""
+          />
+          <span>Kafene</span>
+        </div>
+        <div class="header-list">
+          <ul>
+            <a href="./orders.html" id="orders-link" class="head-links">
+              <li>Orders</li></a
+            >
+            <a href="./products.html" id="products-link" class="head-links">
+              <li>Products</li></a
+            >
+            <a href="./users.html" id="users-link" class="head-links">
+              <li>Users</li></a
+            >
+          </ul>
+        </div>
+        <a href="../index.html" id="logout" onclick="logout()">Logout</a>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <section id="users-page">
+        <label for="search" class="page-header"> Users</label>
+        <form action="" class="search-form">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search by Name"
+          />
+
+          <button type="reset" id="reset" onclick="resetData()">Reset</button>
+        </form>
+        <div id="users-table" onload="searchSetup()">
+          <table>
+            <thead>
+              <tr>
+                <th class="userId">ID</th>
+                <th class="avatar">User Avatar</th>
+                <th>Full Name</th>
+                <th>DoB</th>
+                <th>Gender</th>
+                <th>Current Location</th>
+              </tr>
+            </thead>
+            <tbody id="users"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="../index.js"></script>
+    <script src="../js/users.js"></script>
+  </body>
+</html>
